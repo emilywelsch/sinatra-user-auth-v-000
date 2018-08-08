@@ -21,11 +21,6 @@ class ApplicationController < Sinatra::Base
     session[:user_id] = @user.id
     redirect '/users/home'
   end
-  # post '/registrations' do
-  #   @user = User.find_by(email: params[:email])
-  #   session[:user_id] = @user.id
-  #   redirect '/users/home'
-  # end
 
   get '/sessions/login' do
     erb :'sessions/login'
